@@ -17,10 +17,14 @@ repos:
   rev: 1.6.3
   hooks:
     - id: nbqa-black
+      additional_dependencies: [black==24.10.0, setuptools==75.8.2]
       args: [--line-length=72]
     - id: nbqa-flake8
+      additional_dependencies: [flake8==7.1.1, setuptools==75.8.2]
       args: ["--nbqa-diff"]
     - id: nbqa-pyupgrade
+      additional_dependencies: [pyupgrade==3.19.0, setuptools==75.8.2]
       args: ["--py310-plus"]
     - id: nbqa-isort
+      additional_dependencies: [isort==5.13.2, setuptools==75.8.2]
       args: [--line-length=72]

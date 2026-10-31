@@ -38,7 +38,9 @@ The existing requirements file is a broad, older environment export with platfor
 
 ## Preprocessing and generated files
 
-The scaler is fitted on training features and then applied to validation and test features. DataFrame columns and row indices are preserved.
+Category mappings, median imputation, and scaling are fitted on training features and then applied to validation and test features. Unseen categorical values use -1, and missing numeric features use training medians. DataFrame columns and row indices are preserved.
+
+The earlier imputation and polynomial sections define optional helpers. They can be read in notebook order without accessing training variables before the split exists. Call those helpers only after preparing the appropriate numeric splits; the default workflow keeps its original feature set.
 
 The export cell writes features and targets under `output/processed/`, preserving the original files in `input/`:
 
@@ -51,10 +53,11 @@ These files include a `row_id` column for alignment. Model sections may also wri
 ## Focused regression checks
 
 ```bash
+python -m pip install -r requirements-checks.txt
 python -m unittest discover -s tests -v
 ```
 
-The checks cover preprocessing/export behavior and logger timestamp formatting. They use pandas and scikit-learn without executing the complete notebook or training models.
+The checks cover preprocessing/export behavior, unseen and missing categorical values, training-only imputation, preprocessing cell execution order, optional feature recipes, and logger timestamp formatting. The pinned check environment uses Python 3.12. These tests use pandas and scikit-learn without executing the complete notebook or training models.
 
 Saved notebook outputs are historical records. The full experiment environment and model scores have not been reproduced by these focused checks.
 
