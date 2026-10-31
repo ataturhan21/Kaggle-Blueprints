@@ -134,3 +134,6 @@ tmp/
 #others
 catboost_info/
 mlruns/
+
+# Generated notebook exports
+/output/

@@ -8,7 +8,8 @@ def setup_applevel_logger(logger_name=APP_LOGGER_NAME, file_name=None):
     logger = logging.getLogger(logger_name)
     logger.setLevel(logging.DEBUG)
     formatter = logging.Formatter(
-        "%(asctime)s[:19] - %(name)s - %(levelname)s - %(message)s"
+        "%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+        datefmt="%Y-%m-%d %H:%M:%S",
     )
     sh = logging.StreamHandler(sys.stdout)
     sh.setFormatter(formatter)
@@ -23,3 +24,4 @@ def setup_applevel_logger(logger_name=APP_LOGGER_NAME, file_name=None):
 
 def get_logger(module_name):
     return logging.getLogger(APP_LOGGER_NAME).getChild(module_name)
+
