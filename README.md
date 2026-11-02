@@ -2,7 +2,7 @@
 
 An experimental tabular-classification notebook with data exploration, preprocessing, boosted-tree models, hyperparameter search, feature analysis, and ensembling. The checked-in example uses Titanic passenger data.
 
-**[Open the notebook](notebooks/Tabular%20Data%20Notebook.ipynb)** · **[Sample inputs](input/)** · **[GPL v3 license](LICENSE)**
+**[Open the notebook](notebooks/Tabular%20Data%20Notebook.ipynb)** · **[Sample inputs](input/)** · **[MIT license](LICENSE)**
 
 ## Repository guide
 
@@ -63,4 +63,4 @@ Saved notebook outputs are historical records. The full experiment environment a
 
 ## License
 
-[GNU General Public License v3](LICENSE).
+[MIT](LICENSE).
