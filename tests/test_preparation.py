@@ -61,7 +61,8 @@ class PreparationTests(unittest.TestCase):
         def create_report(frame, **kwargs):
             self.assertIs(frame, sentinel)
             return Report()
-        exec(code, {"train_org": sentinel, "create_report": create_report})
+        exec(code, {"train_org": sentinel, "create_report": create_report,
+                    "os": SimpleNamespace(makedirs=lambda *args, **kwargs: None)})
         self.assertEqual(len(captured), 1)
 
     def test_optional_recipes_can_be_defined_before_training_splits_exist(self):
