@@ -137,3 +137,9 @@ mlruns/
 
 # Generated notebook exports
 /output/
+
+# Files written by the notebook
+/Reports/
+notebooks/submission.csv
+notebooks/Submission-*.csv
+notebooks/Shell Regressor/
