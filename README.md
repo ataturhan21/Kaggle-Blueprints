@@ -2,7 +2,7 @@
 
 An experimental tabular-classification notebook with data exploration, preprocessing, boosted-tree models, hyperparameter search, feature analysis, and ensembling. The checked-in example uses Titanic passenger data.
 
-**[Open the notebook](notebooks/Tabular%20Data%20Notebook.ipynb)** · **[Sample inputs](input/)** · **[MIT license](LICENSE)**
+**[Open the notebook](notebooks/Tabular%20Data%20Notebook.ipynb)** · **[Sample inputs](input/)**
 
 ## Contents
 
@@ -12,7 +12,7 @@ An experimental tabular-classification notebook with data exploration, preproces
 - [Preprocessing and generated files](#preprocessing-and-generated-files)
 - [Saved notebook results](#saved-notebook-results)
 - [Focused regression checks](#focused-regression-checks)
-- [License](#license)
+- [Copyright](#copyright)
 
 ## Repository guide
 
@@ -89,6 +89,6 @@ The checks cover every code cell parsing, the submission schema, required import
 
 Saved notebook outputs are historical records. The full experiment environment and model scores have not been reproduced by these focused checks.
 
-## License
+## Copyright
 
-[MIT](LICENSE).
+© Ata Turhan. All rights reserved. This repository has no open-source license: its code may not be copied, modified or redistributed.
